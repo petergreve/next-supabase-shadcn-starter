@@ -18,7 +18,7 @@ import { useState } from "react";
 export function UpdatePasswordForm({
   className,
   ...props
-}: React.ComponentPropsWithoutRef<"div">) {
+}: React.ComponentProps<"div">) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -46,7 +46,7 @@ export function UpdatePasswordForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Reset Your Password</CardTitle>
+          <CardTitle>Reset Your Password</CardTitle>
           <CardDescription>
             Please enter your new password below.
           </CardDescription>
@@ -54,7 +54,7 @@ export function UpdatePasswordForm({
         <CardContent>
           <form onSubmit={handleForgotPassword}>
             <div className="flex flex-col gap-6">
-              <div className="grid gap-2">
+              <div className="grid gap-3">
                 <Label htmlFor="password">New password</Label>
                 <Input
                   id="password"

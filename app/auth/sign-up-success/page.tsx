@@ -13,8 +13,8 @@ export default function Page() {
         <div className="flex flex-col gap-6">
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl">
-                Thank you for signing up!
+              <CardTitle>
+                Thank you for signing up! ✅
               </CardTitle>
               <CardDescription>Check your email to confirm</CardDescription>
             </CardHeader>
