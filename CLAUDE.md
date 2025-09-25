@@ -2,6 +2,12 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Rules
+
+- Always use context7 when I need code generation, setup or configuration steps, or
+library/API documentation. This means you should automatically use the Context7 MCP
+tools to resolve library id and get library docs without me having to explicitly ask.
+
 ## Development Commands
 
 ### Core Development
@@ -28,6 +34,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npx shadcn@latest add <component>` - Add new shadcn/ui components
 - `npx shadcn@latest add @shadcn/<block>` - Add shadcn blocks (complex components)
 - **Configuration:** Uses "new-york" style with Lucide icons, CSS variables enabled
+
+### Playwright E2E Testing
+- `npm run test:e2e` - Run E2E tests in headless mode (recommended)
+- `npm run test:e2e:ui` - Run E2E tests with Playwright UI (may have timing issues in some environments)
+- `npx playwright test --headed` - Run tests with visible browser
+- `npx playwright test --workers=1` - Run tests sequentially for debugging
+- **Note:** If UI mode fails while headless mode passes, use `--headed` mode for visual debugging
 
 ## Architecture Overview
 
